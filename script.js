@@ -4,7 +4,7 @@ const units = [
     label: "Unit 1",
     title: "Phonemic Awareness and CVC Review",
     range: "Lessons 1-10",
-    audience: "First Grade",
+    audience: "Grades K-1",
     description:
       "Blend, segment, substitute, and review CVC words with all five short vowels.",
     lessons: [
@@ -25,7 +25,7 @@ const units = [
     label: "Unit 2",
     title: "Digraphs",
     range: "Lessons 11-24",
-    audience: "First Grade",
+    audience: "Grades K-1",
     description:
       "Introduce common consonant digraphs, then move into word building, sentence reading, and review.",
     lessons: [
@@ -50,7 +50,7 @@ const units = [
     label: "Unit 3",
     title: "Consonant Blends",
     range: "Lessons 25-44",
-    audience: "First Grade",
+    audience: "Grades K-1",
     description:
       "Build from initial blends into final blends, three-letter blends, fluency, and mastery checks.",
     lessons: [
@@ -81,7 +81,7 @@ const units = [
     label: "Unit 4",
     title: "Two-Syllable Closed Words",
     range: "Lessons 45-54",
-    audience: "First Grade",
+    audience: "Grades K-1",
     description:
       "Introduce syllable thinking and chunking strategies for reading and building longer words.",
     lessons: [
@@ -102,7 +102,7 @@ const units = [
     label: "Unit 5",
     title: "Silent E / VCe",
     range: "Lessons 55-69",
-    audience: "First Grade",
+    audience: "Grades K-1",
     description:
       "Move from introduction to pattern-specific lessons, reading practice, sentence fluency, and review.",
     lessons: [
@@ -128,7 +128,7 @@ const units = [
     label: "Unit 6",
     title: "Vowel Teams",
     range: "Lessons 70-84",
-    audience: "First Grade",
+    audience: "Grades K-1",
     description:
       "Introduce common long-vowel teams and move toward connected reading and fluency practice.",
     lessons: [
@@ -154,7 +154,7 @@ const units = [
     label: "Unit 7",
     title: "R-Controlled Vowels",
     range: "Lessons 85-90",
-    audience: "First Grade",
+    audience: "Grades K-1",
     description:
       "Close the year with focused instruction on r-controlled patterns and a cumulative review.",
     lessons: ["AR", "OR", "ER", "IR", "UR", "R-Controlled Review"],
@@ -189,12 +189,12 @@ const translations = {
       "A structured literacy lesson library organized around a clearly sequenced phonological progression, with mobile-friendly design and room for translated family support.",
     browseLessons: "Browse Lessons",
     seeLanguages: "See Language Options",
-    statLessons: "first-grade lessons ready",
-    statUnits: "units ready for first grade",
-    statGrades: "grade band ready to launch",
+    statLessons: "K-1 lessons ready",
+    statUnits: "units ready for grades K-1",
+    statGrades: "grade grouping ready to launch",
     featuredLesson: "Featured lesson",
     spotlightText:
-      "Launch with a clear first-grade pathway that begins with oral blending and builds toward fluent decoding.",
+      "Launch with a clear K-1 pathway that begins with oral blending and builds toward fluent decoding.",
     captionsReady: "Captions ready",
     familyFriendly: "Family-friendly pacing",
     languageAccess: "Language access",
@@ -212,23 +212,19 @@ const translations = {
     roadmapEyebrow: "Grade roadmap",
     roadmapTitle: "A launch plan that shows what is ready now and what comes next",
     roadmapIntro:
-      "First grade is ready to publish now. Kindergarten and second grade can be added as the next phases of the library.",
-    roadmapKLabel: "Coming next",
-    roadmapKTitle: "Kindergarten",
-    roadmapKText:
-      "Foundational phonological awareness, early sound-symbol connections, and beginner blending routines.",
+      "A combined K-1 lesson pathway is ready to publish now. Grade 2 remains in development.",
     roadmap1Label: "Ready now",
-    roadmap1Title: "First Grade",
+    roadmap1Title: "Grades K-1",
     roadmap1Text:
-      "A complete 90-lesson sequence across seven units with room for video lessons, summaries, and translated support.",
+      "A complete 90-lesson sequence across seven units that can serve a combined Kindergarten and first-grade pathway.",
     roadmap2Label: "In development",
-    roadmap2Title: "Second Grade",
+    roadmap2Title: "Grade 2",
     roadmap2Text:
       "Expanded multisyllabic decoding, advanced patterns, and more fluent reading work.",
     libraryEyebrow: "Lesson library",
-    libraryTitle: "First grade scope and sequence, organized for real use",
+    libraryTitle: "K-1 scope and sequence, organized for real use",
     libraryIntro:
-      "First grade is fully mapped with 90 lessons across seven units. Kindergarten and second grade are in development.",
+      "The combined K-1 pathway is fully mapped with 90 lessons across seven units. Grade 2 is in development.",
     filterLabel: "Unit",
     filterAll: "All lessons",
     filterUnitOne: "Unit 1: Phonemic Awareness and CVC Review",
@@ -239,16 +235,10 @@ const translations = {
     filterUnitSix: "Unit 6: Vowel Teams",
     filterUnitSeven: "Unit 7: R-Controlled Vowels",
     comingEyebrow: "Coming soon",
-    comingTitle: "Kindergarten and second grade are already built into the plan",
+    comingTitle: "Grade 2 is the next step in the plan",
     comingIntro:
-      "These placeholders help families and educators see the full vision now, even before every lesson is published.",
-    comingKTitle: "Kindergarten lesson path",
-    comingKText:
-      "This section will house foundational phonological awareness, early sound play, alphabet knowledge, and first blending lessons.",
-    comingKPointOne: "Phonological awareness routines",
-    comingKPointTwo: "Letter-sound introduction",
-    comingKPointThree: "Early blending and segmenting",
-    coming2Title: "Second grade lesson path",
+      "The current lesson pathway serves grades K-1. Grade 2 will expand the library with more advanced reading and word-study work.",
+    coming2Title: "Grade 2 lesson path",
     coming2Text:
       "This section will grow into advanced decoding, larger word analysis, connected text, and more fluent structured reading practice.",
     coming2PointOne: "Multisyllabic decoding",
@@ -299,7 +289,7 @@ const translations = {
     detailWhatToExpect: "What to expect",
     detailSequence: "Where it fits",
     detailSupport: "Family support",
-    detailExpectText: "Short lesson planned for first grade learners.",
+    detailExpectText: "Short lesson planned for K-1 learners.",
     detailSupportText:
       "Use short, repeatable practice. Pause as needed and revisit lessons when additional review is helpful.",
     faqEyebrow: "FAQ",
@@ -309,7 +299,7 @@ const translations = {
       "Start with the recommended lesson order, watch short sessions consistently, and repeat lessons whenever a student benefits from review.",
     faqTwoTitle: "Will more grades be added?",
     faqTwoText:
-      "Yes. The first-grade library is launching first, with Kindergarten and second grade planned next.",
+      "Yes. The current K-1 lesson pathway launches first, with Grade 2 planned next.",
     faqThreeTitle: "Will translated support be available?",
     faqThreeText:
       "Yes. The site is designed to grow into translated navigation, lesson summaries, and caregiver guidance.",
@@ -328,9 +318,9 @@ const translations = {
       "Una biblioteca de alfabetizacion estructurada organizada en torno a una progresion fonologica clara, con diseno adaptable y espacio para apoyo familiar traducido.",
     browseLessons: "Ver lecciones",
     seeLanguages: "Ver idiomas",
-    statLessons: "lecciones de primer grado listas",
-    statUnits: "unidades listas para primer grado",
-    statGrades: "nivel listo para lanzamiento",
+    statLessons: "lecciones de K-1 listas",
+    statUnits: "unidades listas para grados K-1",
+    statGrades: "agrupacion lista para lanzamiento",
     featuredLesson: "Leccion destacada",
     spotlightText:
       "Modelado de sonidos, combinacion guiada y pasos de practica sencillos para familias y docentes.",
@@ -351,23 +341,19 @@ const translations = {
     roadmapEyebrow: "Ruta por grados",
     roadmapTitle: "Un plan de lanzamiento que muestra lo que ya esta listo y lo que sigue",
     roadmapIntro:
-      "Primer grado esta listo para publicarse ahora. Kindergarten y segundo grado pueden agregarse en las siguientes fases.",
-    roadmapKLabel: "Lo siguiente",
-    roadmapKTitle: "Kindergarten",
-    roadmapKText:
-      "Conciencia fonologica fundamental, primeras conexiones sonido-letra y rutinas iniciales de combinacion.",
+      "La ruta combinada de K-1 esta lista para publicarse ahora. El grado 2 sigue en desarrollo.",
     roadmap1Label: "Listo ahora",
-    roadmap1Title: "Primer grado",
+    roadmap1Title: "Grados K-1",
     roadmap1Text:
-      "Una secuencia completa de 90 lecciones en siete unidades con espacio para videos, resumenes y apoyo traducido.",
+      "Una secuencia completa de 90 lecciones en siete unidades que puede servir a una ruta combinada de Kindergarten y primer grado.",
     roadmap2Label: "En desarrollo",
-    roadmap2Title: "Segundo grado",
+    roadmap2Title: "Grado 2",
     roadmap2Text:
       "Decodificacion multisilabica ampliada, patrones avanzados y mayor trabajo de fluidez.",
     libraryEyebrow: "Biblioteca de lecciones",
-    libraryTitle: "Secuencia de primer grado organizada para uso real",
+    libraryTitle: "Secuencia de K-1 organizada para uso real",
     libraryIntro:
-      "El primer grado ya tiene 90 lecciones distribuidas en siete unidades. Kindergarten y segundo grado estan en desarrollo.",
+      "La ruta combinada de K-1 ya tiene 90 lecciones distribuidas en siete unidades. El grado 2 esta en desarrollo.",
     filterLabel: "Unidad",
     filterAll: "Todas las lecciones",
     filterUnitOne: "Unidad 1: Conciencia fonemica y repaso CVC",
@@ -378,16 +364,10 @@ const translations = {
     filterUnitSix: "Unidad 6: Equipos vocalicos",
     filterUnitSeven: "Unidad 7: Vocales controladas por r",
     comingEyebrow: "Proximamente",
-    comingTitle: "Kindergarten y segundo grado ya forman parte del plan",
+    comingTitle: "El grado 2 es el siguiente paso del plan",
     comingIntro:
-      "Estos espacios ayudan a las familias y a los educadores a ver la vision completa desde ahora, incluso antes de que se publiquen todas las lecciones.",
-    comingKTitle: "Ruta de lecciones de Kindergarten",
-    comingKText:
-      "Esta seccion incluira conciencia fonologica fundamental, juego temprano con sonidos, conocimiento del alfabeto y primeras lecciones de combinacion.",
-    comingKPointOne: "Rutinas de conciencia fonologica",
-    comingKPointTwo: "Introduccion sonido-letra",
-    comingKPointThree: "Combinacion y segmentacion inicial",
-    coming2Title: "Ruta de lecciones de segundo grado",
+      "La ruta actual de lecciones sirve a los grados K-1. El grado 2 ampliara la biblioteca con trabajo mas avanzado de lectura y estudio de palabras.",
+    coming2Title: "Ruta de lecciones de grado 2",
     coming2Text:
       "Esta seccion crecera hacia decodificacion avanzada, analisis de palabras mas largas, texto conectado y practica de lectura estructurada con mayor fluidez.",
     coming2PointOne: "Decodificacion multisilabica",
@@ -439,7 +419,7 @@ const translations = {
     detailWhatToExpect: "Que esperar",
     detailSequence: "Ubicacion en la secuencia",
     detailSupport: "Apoyo para familias",
-    detailExpectText: "Leccion breve pensada para estudiantes de primer grado.",
+    detailExpectText: "Leccion breve pensada para estudiantes de K-1.",
     detailSupportText:
       "Use practica breve y repetible. Haga pausas cuando sea necesario y repita las lecciones cuando haga falta mas repaso.",
     faqEyebrow: "Preguntas frecuentes",
@@ -449,7 +429,7 @@ const translations = {
       "Empiecen con el orden recomendado, vean sesiones cortas de forma constante y repitan lecciones cuando el estudiante necesite repaso.",
     faqTwoTitle: "Se agregaran mas grados?",
     faqTwoText:
-      "Si. La biblioteca de primer grado se lanza primero y luego se agregaran Kindergarten y segundo grado.",
+      "Si. La ruta actual de K-1 se lanza primero y luego se agregara el grado 2.",
     faqThreeTitle: "Habra apoyo traducido?",
     faqThreeText:
       "Si. El sitio esta disenado para crecer hacia navegacion traducida, resumenes de lecciones y orientacion para cuidadores.",
