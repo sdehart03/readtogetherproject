@@ -1,4 +1,4 @@
-# Mr. DeHart's Read Together Project
+# The Read Together Project
 
 Static website for a structured literacy lesson library.
 
@@ -7,7 +7,8 @@ Static website for a structured literacy lesson library.
 - `index.html` - page structure and content
 - `styles.css` - site styles and responsive layout
 - `script.js` - lesson data, filtering, and translation toggle
-- `assets/logo.png` - site logo
+- `assets/read-together-logo.svg` - primary site logo
+- `assets/read-together-mark.svg` - favicon and icon mark
 
 ## Publish On Netlify
 

@@ -272,7 +272,7 @@ const translations = {
     aboutEyebrow: "About the project",
     aboutTitle: "A warm, trustworthy home for reading instruction",
     aboutText:
-      "Mr. DeHart's Read Together Project provides families and educators with straightforward access to recorded reading lessons built from an original structured literacy scope and sequence, especially for students who benefit from repeated viewing, clear routines, and multilingual support.",
+      "The Read Together Project provides families and educators with straightforward access to recorded reading lessons built from an original structured literacy scope and sequence, especially for students who benefit from repeated viewing, clear routines, and multilingual support.",
     footerText:
       "Designed to support literacy learning with strong instruction, accessible design, and room to grow.",
     recordingLength: "10 minute recording",
@@ -396,7 +396,7 @@ const translations = {
     aboutEyebrow: "Sobre el proyecto",
     aboutTitle: "Un hogar calido y confiable para la instruccion de lectura",
     aboutText:
-      "El proyecto Read Together del Sr. DeHart brinda a familias y educadores acceso directo a lecciones grabadas de lectura creadas a partir de un alcance y secuencia original de alfabetizacion estructurada, especialmente para estudiantes que se benefician de verlas varias veces, rutinas claras y apoyo multilingue.",
+      "The Read Together Project brinda a familias y educadores acceso directo a lecciones grabadas de lectura creadas a partir de un alcance y secuencia original de alfabetizacion estructurada, especialmente para estudiantes que se benefician de verlas varias veces, rutinas claras y apoyo multilingue.",
     footerText:
       "Disenado para apoyar el aprendizaje de la lectura con instruccion solida, diseno accesible y espacio para crecer.",
     recordingLength: "Grabacion de 10 minutos",

@@ -1,0 +1,16 @@
+<svg width="820" height="220" viewBox="0 0 820 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="820" height="220" rx="24" fill="white" fill-opacity="0"/>
+  <g stroke="#133A5F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M70 58C91 58 110 66 126 81V162C110 147 91 139 70 139V58Z"/>
+    <path d="M190 58C169 58 150 66 134 81V162C150 147 169 139 190 139V58Z"/>
+    <path d="M130 82V177"/>
+    <path d="M95 177H166"/>
+    <path d="M130 162C114 149 93 141 70 141"/>
+    <path d="M130 162C146 149 167 141 190 141"/>
+  </g>
+  <g fill="#133A5F" font-family="Manrope, Arial, sans-serif" font-weight="800">
+    <text x="245" y="78" font-size="40" letter-spacing="1.1">THE</text>
+    <text x="245" y="132" font-size="58" letter-spacing="1.2">READ TOGETHER</text>
+    <text x="245" y="186" font-size="58" letter-spacing="1.2">PROJECT</text>
+  </g>
+</svg>
