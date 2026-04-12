@@ -188,6 +188,10 @@ const translations = {
     heroTitle: "Structured literacy lessons for home and school.",
     heroText:
       "A structured literacy lesson library organized around a clearly sequenced phonological progression, with mobile-friendly design and room for translated family support.",
+    welcomeVideoLabel: "Welcome video",
+    welcomeVideoTitle: "A short introduction can live here",
+    welcomeVideoText:
+      "Add a brief welcome video here later to explain how families can use the site and where to begin.",
     browseLessons: "Browse Lessons",
     seeLanguages: "See Language Options",
     statLessons: "K-1 lessons ready",
@@ -311,6 +315,10 @@ const translations = {
     heroTitle: "Lecciones de alfabetizacion estructurada para el hogar y la escuela.",
     heroText:
       "Una biblioteca de alfabetizacion estructurada organizada en torno a una progresion fonologica clara, con diseno adaptable y espacio para apoyo familiar traducido.",
+    welcomeVideoLabel: "Video de bienvenida",
+    welcomeVideoTitle: "Aqui puede ir una breve introduccion",
+    welcomeVideoText:
+      "Agregue aqui mas adelante un breve video de bienvenida para explicar como pueden usar el sitio las familias y por donde comenzar.",
     browseLessons: "Ver lecciones",
     seeLanguages: "Ver idiomas",
     statLessons: "lecciones de K-1 listas",
