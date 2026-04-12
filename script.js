@@ -177,6 +177,7 @@ const lessons = units.flatMap((unit) =>
 
 const translations = {
   en: {
+    navHome: "Home",
     navLessons: "Lessons",
     navRoadmap: "Roadmap",
     navTranslation: "Translation",
@@ -225,6 +226,9 @@ const translations = {
     libraryTitle: "K-1 scope and sequence, organized for real use",
     libraryIntro:
       "The combined K-1 pathway is fully mapped with 90 lessons across seven units. Grade 2 is in development.",
+    libraryPageTitle: "K-1 lessons, all in one place",
+    libraryPageIntro:
+      "Browse the full lesson pathway by unit, preview individual lessons, and keep Grade 2 planning separate until it is ready to launch.",
     filterLabel: "Unit",
     filterAll: "All lessons",
     filterUnitOne: "Unit 1: Phonemic Awareness and CVC Review",
@@ -293,8 +297,10 @@ const translations = {
     faqThreeText:
       "Yes. The site is designed to grow into translated navigation, lesson summaries, and caregiver guidance.",
     footerAction: "Back to top",
+    backHome: "Back to Home",
   },
   es: {
+    navHome: "Inicio",
     navLessons: "Lecciones",
     navRoadmap: "Ruta",
     navTranslation: "Traduccion",
@@ -343,6 +349,9 @@ const translations = {
     libraryTitle: "Secuencia de K-1 organizada para uso real",
     libraryIntro:
       "La ruta combinada de K-1 ya tiene 90 lecciones distribuidas en siete unidades. El grado 2 esta en desarrollo.",
+    libraryPageTitle: "Lecciones de K-1 en un solo lugar",
+    libraryPageIntro:
+      "Recorra toda la ruta de lecciones por unidad, revise lecciones individuales y mantenga aparte la planificacion de grado 2 hasta que este lista para publicarse.",
     filterLabel: "Unidad",
     filterAll: "Todas las lecciones",
     filterUnitOne: "Unidad 1: Conciencia fonemica y repaso CVC",
@@ -412,6 +421,7 @@ const translations = {
     faqThreeText:
       "Si. El sitio esta disenado para crecer hacia navegacion traducida, resumenes de lecciones y orientacion para cuidadores.",
     footerAction: "Volver arriba",
+    backHome: "Volver al inicio",
   },
 };
 
@@ -426,10 +436,15 @@ const topbar = document.querySelector(".topbar");
 const spotlightTitle = document.querySelector("#spotlight-title");
 const spotlightText = document.querySelector("#spotlight-text");
 const spotlightUnit = document.querySelector("#spotlight-unit");
+const currentLanguage = () => languageSwitcher?.value || document.documentElement.lang || "en";
 let selectedLessonId = lessons[0].lessonNumber;
 let lastScrollY = window.scrollY;
 
 function renderUnits() {
+  if (!unitGrid) {
+    return;
+  }
+
   unitGrid.innerHTML = units
     .map(
       (unit) => `
@@ -445,7 +460,23 @@ function renderUnits() {
 }
 
 function renderLessonDetail(lesson) {
-  const copy = translations[languageSwitcher.value] || translations.en;
+  if (!lessonDetail) {
+    if (spotlightTitle) {
+      spotlightTitle.textContent = `Lesson ${lesson.lessonNumber}: ${lesson.title}`;
+    }
+
+    if (spotlightText) {
+      spotlightText.textContent = lesson.description;
+    }
+
+    if (spotlightUnit) {
+      spotlightUnit.textContent = `${lesson.unit}: ${lesson.unitTitle}`;
+    }
+
+    return;
+  }
+
+  const copy = translations[currentLanguage()] || translations.en;
   lessonDetail.innerHTML = `
     <p class="panel-label">${copy.detailEyebrow}</p>
     <h3>Lesson ${lesson.lessonNumber}: ${lesson.title}</h3>
@@ -469,13 +500,21 @@ function renderLessonDetail(lesson) {
     </div>
   `;
 
-  spotlightTitle.textContent = `Lesson ${lesson.lessonNumber}: ${lesson.title}`;
-  spotlightText.textContent = lesson.description;
-  spotlightUnit.textContent = `${lesson.unit}: ${lesson.unitTitle}`;
+  if (spotlightTitle) {
+    spotlightTitle.textContent = `Lesson ${lesson.lessonNumber}: ${lesson.title}`;
+  }
+
+  if (spotlightText) {
+    spotlightText.textContent = lesson.description;
+  }
+
+  if (spotlightUnit) {
+    spotlightUnit.textContent = `${lesson.unit}: ${lesson.unitTitle}`;
+  }
 }
 
 function renderLessons(filter = "all") {
-  const copy = translations[languageSwitcher.value] || translations.en;
+  const copy = translations[currentLanguage()] || translations.en;
   const filteredLessons =
     filter === "all" ? lessons : lessons.filter((lesson) => lesson.category === filter);
 
@@ -485,6 +524,10 @@ function renderLessons(filter = "all") {
   if (activeLesson) {
     selectedLessonId = activeLesson.lessonNumber;
     renderLessonDetail(activeLesson);
+  }
+
+  if (!lessonGrid) {
+    return;
   }
 
   lessonGrid.innerHTML = filteredLessons
@@ -525,45 +568,55 @@ function applyTranslations(language) {
   document.documentElement.lang = language;
 }
 
-lessonFilter.addEventListener("change", (event) => {
-  renderLessons(event.target.value);
-});
+if (lessonFilter) {
+  lessonFilter.addEventListener("change", (event) => {
+    renderLessons(event.target.value);
+  });
+}
 
-lessonGrid.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-lesson-id]");
-  if (!button) {
-    return;
-  }
+if (lessonGrid) {
+  lessonGrid.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-lesson-id]");
+    if (!button) {
+      return;
+    }
 
-  selectedLessonId = Number(button.dataset.lessonId);
-  renderLessons(lessonFilter.value);
-});
+    selectedLessonId = Number(button.dataset.lessonId);
+    renderLessons(lessonFilter?.value || "all");
+  });
+}
 
-languageSwitcher.addEventListener("change", (event) => {
-  applyTranslations(event.target.value);
-  renderUnits();
-  renderLessons(lessonFilter.value);
-});
+if (languageSwitcher) {
+  languageSwitcher.addEventListener("change", (event) => {
+    applyTranslations(event.target.value);
+    renderUnits();
+    renderLessons(lessonFilter?.value || "all");
+  });
+}
 
-menuToggle.addEventListener("click", () => {
-  const isOpen = siteNav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-});
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
 
-window.addEventListener("scroll", () => {
-  const currentScrollY = window.scrollY;
-  const scrollingDown = currentScrollY > lastScrollY;
-  const passedThreshold = currentScrollY > 80;
+if (topbar && siteNav) {
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    const scrollingDown = currentScrollY > lastScrollY;
+    const passedThreshold = currentScrollY > 80;
 
-  if (passedThreshold && scrollingDown && !siteNav.classList.contains("open")) {
-    topbar.classList.add("is-hidden");
-  } else {
-    topbar.classList.remove("is-hidden");
-  }
+    if (passedThreshold && scrollingDown && !siteNav.classList.contains("open")) {
+      topbar.classList.add("is-hidden");
+    } else {
+      topbar.classList.remove("is-hidden");
+    }
 
-  lastScrollY = currentScrollY;
-});
+    lastScrollY = currentScrollY;
+  });
+}
 
-applyTranslations("en");
+applyTranslations(currentLanguage());
 renderUnits();
-renderLessons();
+renderLessons(lessonFilter?.value || "all");

@@ -111,6 +111,46 @@ a {
   padding: 0.3rem 0 1rem;
 }
 
+.page-intro {
+  padding-top: 0.35rem;
+}
+
+.page-intro-card {
+  padding: clamp(1.2rem, 2.8vw, 1.9rem);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(16, 42, 67, 0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.page-intro-card h1 {
+  max-width: 12ch;
+  color: var(--navy-950);
+  font-size: clamp(1.9rem, 4.2vw, 3.15rem);
+}
+
+.page-intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.page-intro-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
+  gap: 1rem;
+  align-items: end;
+  margin-top: 0.9rem;
+}
+
+.page-language-picker {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+
 .hero-copy,
 .panel-card,
 .trust-strip article,
@@ -632,6 +672,10 @@ select {
   }
 
   .lesson-browser {
+    grid-template-columns: 1fr;
+  }
+
+  .page-intro-meta {
     grid-template-columns: 1fr;
   }
 
