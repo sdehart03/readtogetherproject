@@ -254,17 +254,6 @@ const translations = {
     phaseThreeTitle: "Phase 3: expanded access",
     phaseThreeText:
       "Introduce translated transcripts and additional language options as the library grows.",
-    sequenceEyebrow: "Scope and sequence",
-    sequenceTitle: "Your instruction can be original, structured, and scalable",
-    sequenceOneTitle: "Start with phonological skills",
-    sequenceOneText:
-      "Build early lessons around listening, segmenting, blending, and manipulating sounds.",
-    sequenceTwoTitle: "Move into sound-spelling patterns",
-    sequenceTwoText:
-      "Introduce consonants, short vowels, digraphs, and high-utility word patterns in a clear progression.",
-    sequenceThreeTitle: "Grow toward fluent reading",
-    sequenceThreeText:
-      "Expand into connected text, multisyllabic words, and review pathways for repeated practice.",
     familiesEyebrow: "For families and educators",
     familiesTitle: "Every lesson should feel welcoming, not overwhelming",
     familyOneTitle: "Step-by-step guidance",
@@ -384,17 +373,6 @@ const translations = {
     phaseThreeTitle: "Fase 3: acceso ampliado",
     phaseThreeText:
       "Incorpore transcripciones traducidas y mas opciones de idioma a medida que crezca la biblioteca.",
-    sequenceEyebrow: "Alcance y secuencia",
-    sequenceTitle: "Su instruccion puede ser original, estructurada y escalable",
-    sequenceOneTitle: "Comience con habilidades fonologicas",
-    sequenceOneText:
-      "Construya las primeras lecciones en torno a escuchar, segmentar, combinar y manipular sonidos.",
-    sequenceTwoTitle: "Avance hacia patrones de sonido y ortografia",
-    sequenceTwoText:
-      "Introduzca consonantes, vocales cortas, digrafos y patrones de palabras de alta utilidad en una progresion clara.",
-    sequenceThreeTitle: "Avance hacia una lectura fluida",
-    sequenceThreeText:
-      "Amplie hacia texto conectado, palabras multisilabicas y rutas de repaso para practica repetida.",
     familiesEyebrow: "Para familias y educadores",
     familiesTitle: "Cada leccion debe sentirse acogedora, no abrumadora",
     familyOneTitle: "Guia paso a paso",
