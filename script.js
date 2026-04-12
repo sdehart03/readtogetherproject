@@ -184,10 +184,9 @@ const translations = {
     navAbout: "About",
     navFaq: "FAQ",
     heroEyebrow: "Inclusive literacy support",
-    heroTitle:
-      "Reading lesson recordings designed for home, school, and everywhere in between.",
+    heroTitle: "Structured literacy lessons for home and school.",
     heroText:
-      "A calm, easy-to-use library of structured literacy lessons built around your own phonological scope and sequence, with translation support, clear navigation, and layouts that work beautifully on phones, tablets, and computers.",
+      "A calm, easy-to-use lesson library built around your own phonological scope and sequence, with mobile-friendly design and room for translated family support.",
     browseLessons: "Browse Lessons",
     seeLanguages: "See Language Options",
     statLessons: "first-grade lessons ready",
@@ -324,10 +323,9 @@ const translations = {
     navAbout: "Acerca de",
     navFaq: "Preguntas",
     heroEyebrow: "Apoyo inclusivo para la alfabetizacion",
-    heroTitle:
-      "Grabaciones de lecciones de lectura disenadas para el hogar, la escuela y todo lo que hay entre ambos.",
+    heroTitle: "Lecciones de alfabetizacion estructurada para el hogar y la escuela.",
     heroText:
-      "Una biblioteca tranquila y facil de usar de lecciones de alfabetizacion estructurada, creada en torno a su propia secuencia fonologica, con apoyo de traduccion, navegacion clara y diseno adaptable para telefonos, tabletas y computadoras.",
+      "Una biblioteca tranquila y facil de usar, creada en torno a su propia secuencia fonologica, con diseno adaptable y espacio para apoyo familiar traducido.",
     browseLessons: "Ver lecciones",
     seeLanguages: "Ver idiomas",
     statLessons: "lecciones de primer grado listas",
