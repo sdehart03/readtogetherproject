@@ -466,10 +466,12 @@ const lessonFilter = document.querySelector("#lesson-filter");
 const languageSwitcher = document.querySelector("#language-switcher");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
+const topbar = document.querySelector(".topbar");
 const spotlightTitle = document.querySelector("#spotlight-title");
 const spotlightText = document.querySelector("#spotlight-text");
 const spotlightUnit = document.querySelector("#spotlight-unit");
 let selectedLessonId = lessons[0].lessonNumber;
+let lastScrollY = window.scrollY;
 
 function renderUnits() {
   unitGrid.innerHTML = units
@@ -590,6 +592,20 @@ languageSwitcher.addEventListener("change", (event) => {
 menuToggle.addEventListener("click", () => {
   const isOpen = siteNav.classList.toggle("open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+  const scrollingDown = currentScrollY > lastScrollY;
+  const passedThreshold = currentScrollY > 80;
+
+  if (passedThreshold && scrollingDown && !siteNav.classList.contains("open")) {
+    topbar.classList.add("is-hidden");
+  } else {
+    topbar.classList.remove("is-hidden");
+  }
+
+  lastScrollY = currentScrollY;
 });
 
 applyTranslations("en");
