@@ -186,7 +186,7 @@ const translations = {
     heroEyebrow: "Inclusive literacy support",
     heroTitle: "Structured literacy lessons for home and school.",
     heroText:
-      "A calm, easy-to-use lesson library built around your own phonological scope and sequence, with mobile-friendly design and room for translated family support.",
+      "A structured literacy lesson library organized around a clearly sequenced phonological progression, with mobile-friendly design and room for translated family support.",
     browseLessons: "Browse Lessons",
     seeLanguages: "See Language Options",
     statLessons: "first-grade lessons ready",
@@ -289,9 +289,9 @@ const translations = {
     aboutEyebrow: "About the project",
     aboutTitle: "A warm, trustworthy home for reading instruction",
     aboutText:
-      "Mr. DeHart's Read Together Project is designed to give families and educators straightforward access to recorded reading lessons built from an original structured literacy scope and sequence, especially for students who benefit from repeated viewing, clear routines, and multilingual support.",
+      "Mr. DeHart's Read Together Project provides families and educators with straightforward access to recorded reading lessons built from an original structured literacy scope and sequence, especially for students who benefit from repeated viewing, clear routines, and multilingual support.",
     footerText:
-      "Built to support literacy learning with calm design, strong instruction, and room to grow.",
+      "Designed to support literacy learning with strong instruction, accessible design, and room to grow.",
     recordingLength: "10 minute recording",
     lessonAction: "View lesson details",
     detailEyebrow: "Selected lesson",
@@ -301,7 +301,7 @@ const translations = {
     detailSupport: "Family support",
     detailExpectText: "Short lesson planned for first grade learners.",
     detailSupportText:
-      "Use short, repeatable practice. Pause as needed, revisit difficult lessons, and keep the pace calm and encouraging.",
+      "Use short, repeatable practice. Pause as needed and revisit lessons when additional review is helpful.",
     faqEyebrow: "FAQ",
     faqTitle: "Questions families and educators are likely to ask first",
     faqOneTitle: "How should families use the lessons?",
@@ -325,7 +325,7 @@ const translations = {
     heroEyebrow: "Apoyo inclusivo para la alfabetizacion",
     heroTitle: "Lecciones de alfabetizacion estructurada para el hogar y la escuela.",
     heroText:
-      "Una biblioteca tranquila y facil de usar, creada en torno a su propia secuencia fonologica, con diseno adaptable y espacio para apoyo familiar traducido.",
+      "Una biblioteca de alfabetizacion estructurada organizada en torno a una progresion fonologica clara, con diseno adaptable y espacio para apoyo familiar traducido.",
     browseLessons: "Ver lecciones",
     seeLanguages: "Ver idiomas",
     statLessons: "lecciones de primer grado listas",
@@ -429,9 +429,9 @@ const translations = {
     aboutEyebrow: "Sobre el proyecto",
     aboutTitle: "Un hogar calido y confiable para la instruccion de lectura",
     aboutText:
-      "El proyecto Read Together del Sr. DeHart esta disenado para brindar a familias y educadores acceso directo a lecciones grabadas de lectura creadas a partir de un alcance y secuencia original de alfabetizacion estructurada, especialmente para estudiantes que se benefician de verlas varias veces, rutinas claras y apoyo multilingue.",
+      "El proyecto Read Together del Sr. DeHart brinda a familias y educadores acceso directo a lecciones grabadas de lectura creadas a partir de un alcance y secuencia original de alfabetizacion estructurada, especialmente para estudiantes que se benefician de verlas varias veces, rutinas claras y apoyo multilingue.",
     footerText:
-      "Creado para apoyar el aprendizaje de la lectura con un diseno sereno, instruccion solida y espacio para crecer.",
+      "Disenado para apoyar el aprendizaje de la lectura con instruccion solida, diseno accesible y espacio para crecer.",
     recordingLength: "Grabacion de 10 minutos",
     lessonAction: "Ver detalles de la leccion",
     detailEyebrow: "Leccion seleccionada",
@@ -441,7 +441,7 @@ const translations = {
     detailSupport: "Apoyo para familias",
     detailExpectText: "Leccion breve pensada para estudiantes de primer grado.",
     detailSupportText:
-      "Use practica breve y repetible. Haga pausas cuando sea necesario, repita las lecciones dificiles y mantenga un ritmo sereno y alentador.",
+      "Use practica breve y repetible. Haga pausas cuando sea necesario y repita las lecciones cuando haga falta mas repaso.",
     faqEyebrow: "Preguntas frecuentes",
     faqTitle: "Preguntas que las familias y los educadores probablemente haran primero",
     faqOneTitle: "Como deben usar las familias las lecciones?",
