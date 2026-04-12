@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr. DeHart's Read Together Project</title>
+    <meta
+      name="description"
+      content="Structured literacy lesson recordings and family-friendly reading support for families, educators, and multilingual learners."
+    />
+    <meta name="theme-color" content="#102a43" />
+    <meta property="og:title" content="Mr. DeHart's Read Together Project" />
+    <meta
+      property="og:description"
+      content="Structured literacy lesson recordings and family-friendly reading support."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mr. DeHart's Read Together Project" />
+    <meta
+      name="twitter:description"
+      content="Structured literacy lesson recordings and family-friendly reading support."
+    />
+    <meta name="twitter:image" content="assets/logo.png" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Mr. DeHart's Read Together Project home">
+          <img
+            class="brand-logo"
+            src="assets/logo.png"
+            alt="Mr. DeHart's Read Together Project logo"
+          />
+          <span class="brand-copy">
+            <span>Structured literacy support for families and educators</span>
+          </span>
+        </a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+
+        <nav id="site-nav" class="site-nav">
+          <a href="#roadmap" data-i18n="navRoadmap">Roadmap</a>
+          <a href="#lessons" data-i18n="navLessons">Lessons</a>
+          <a href="#translation" data-i18n="navTranslation">Translation</a>
+          <a href="#families" data-i18n="navFamilies">Families</a>
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#faq" data-i18n="navFaq">FAQ</a>
+        </nav>
+      </header>
+
+      <main id="home">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="heroEyebrow">Inclusive literacy support</p>
+            <h1 data-i18n="heroTitle">
+              Reading lesson recordings designed for home, school, and everywhere in between.
+            </h1>
+            <p class="hero-text" data-i18n="heroText">
+              A calm, easy-to-use library of structured literacy lessons built around your own
+              phonological scope and sequence, with translation support, clear navigation, and
+              layouts that work beautifully on phones, tablets, and computers.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#lessons" data-i18n="browseLessons"
+                >Browse Lessons</a
+              >
+              <a class="button button-secondary" href="#translation" data-i18n="seeLanguages"
+                >See Language Options</a
+              >
+            </div>
+            <dl class="hero-stats">
+              <div>
+                <dt>90</dt>
+                <dd data-i18n="statLessons">starter lessons mapped out</dd>
+              </div>
+              <div>
+                <dt>7</dt>
+                <dd data-i18n="statUnits">units ready for first grade</dd>
+              </div>
+              <div>
+                <dt>1</dt>
+                <dd data-i18n="statGrades">grade band ready to launch</dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="hero-panel">
+            <div class="panel-card lesson-spotlight">
+              <p class="panel-label" data-i18n="featuredLesson">Featured lesson</p>
+              <h2 id="spotlight-title">Lesson 1: Phoneme Blending (3 sounds)</h2>
+              <p id="spotlight-text" data-i18n="spotlightText">
+                Launch with a clear first-grade pathway that begins with oral blending and builds
+                toward fluent decoding.
+              </p>
+              <ul class="feature-list">
+                <li id="spotlight-unit" data-i18n="recordingLength">Unit 1: Phonemic Awareness and CVC Review</li>
+                <li data-i18n="captionsReady">Captions ready</li>
+                <li data-i18n="familyFriendly">Family-friendly pacing</li>
+              </ul>
+            </div>
+
+            <div class="panel-card translator-card">
+              <div class="translator-head">
+                <p class="panel-label" data-i18n="languageAccess">Language access</p>
+                <select id="language-switcher" aria-label="Language switcher">
+                  <option value="en">English</option>
+                  <option value="es">Español</option>
+                </select>
+              </div>
+              <p data-i18n="translationText">
+                Start in English, then expand with translated navigation, lesson summaries, and
+                parent guidance.
+              </p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="trust-strip" aria-label="Site strengths">
+          <article>
+            <h2 data-i18n="trustOneTitle">Simple to navigate</h2>
+            <p data-i18n="trustOneText">
+              Clear categories, large buttons, and uncluttered pages help families find lessons
+              fast.
+            </p>
+          </article>
+          <article>
+            <h2 data-i18n="trustTwoTitle">Built for multilingual learners</h2>
+            <p data-i18n="trustTwoText">
+              Translation-ready sections make it easier to support caregivers in more than one
+              language.
+            </p>
+          </article>
+          <article>
+            <h2 data-i18n="trustThreeTitle">Made for real devices</h2>
+            <p data-i18n="trustThreeText">
+              The layout adapts cleanly to desktops, tablets, and phones without extra work.
+            </p>
+          </article>
+        </section>
+
+        <section id="roadmap" class="section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="roadmapEyebrow">Grade roadmap</p>
+              <h2 data-i18n="roadmapTitle">A launch plan that shows what is ready now and what comes next</h2>
+              <p class="section-intro" data-i18n="roadmapIntro">
+                First grade is ready to publish now. Kindergarten and second grade can be added as
+                the next phases of the library.
+              </p>
+            </div>
+          </div>
+
+          <div class="roadmap-grid">
+            <article class="roadmap-card roadmap-card-coming">
+              <p class="panel-label" data-i18n="roadmapKLabel">Coming next</p>
+              <h3 data-i18n="roadmapKTitle">Kindergarten</h3>
+              <p data-i18n="roadmapKText">
+                Foundational phonological awareness, early sound-symbol connections, and beginner
+                blending routines.
+              </p>
+            </article>
+            <article class="roadmap-card roadmap-card-live">
+              <p class="panel-label" data-i18n="roadmap1Label">Ready now</p>
+              <h3 data-i18n="roadmap1Title">First Grade</h3>
+              <p data-i18n="roadmap1Text">
+                A complete 90-lesson sequence across seven units with room for video lessons,
+                summaries, and translated support.
+              </p>
+            </article>
+            <article class="roadmap-card roadmap-card-coming">
+              <p class="panel-label" data-i18n="roadmap2Label">In development</p>
+              <h3 data-i18n="roadmap2Title">Second Grade</h3>
+              <p data-i18n="roadmap2Text">
+                Expanded multisyllabic decoding, advanced patterns, and more fluent reading work.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="lessons" class="section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="libraryEyebrow">Lesson library</p>
+              <h2 data-i18n="libraryTitle">First grade scope and sequence, organized for real use</h2>
+              <p class="section-intro" data-i18n="libraryIntro">
+                First grade is fully mapped with 90 lessons across seven units. Kindergarten and
+                second grade are in development.
+              </p>
+            </div>
+            <div class="filter-bar">
+              <label>
+                <span data-i18n="filterLabel">Unit</span>
+                <select id="lesson-filter">
+                  <option value="all" data-i18n="filterAll">All lessons</option>
+                  <option value="phonemic-cvc" data-i18n="filterUnitOne">
+                    Unit 1: Phonemic Awareness and CVC Review
+                  </option>
+                  <option value="digraphs" data-i18n="filterUnitTwo">Unit 2: Digraphs</option>
+                  <option value="consonant-blends" data-i18n="filterUnitThree">
+                    Unit 3: Consonant Blends
+                  </option>
+                  <option value="two-syllable-closed" data-i18n="filterUnitFour">
+                    Unit 4: Two-Syllable Closed Words
+                  </option>
+                  <option value="silent-e-vce" data-i18n="filterUnitFive">
+                    Unit 5: Silent E / VCe
+                  </option>
+                  <option value="vowel-teams" data-i18n="filterUnitSix">Unit 6: Vowel Teams</option>
+                  <option value="r-controlled" data-i18n="filterUnitSeven">
+                    Unit 7: R-Controlled Vowels
+                  </option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div id="unit-grid" class="unit-grid"></div>
+          <div class="lesson-browser">
+            <div id="lesson-grid" class="lesson-grid"></div>
+            <aside id="lesson-detail" class="lesson-detail panel-card" aria-live="polite"></aside>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="comingEyebrow">Coming soon</p>
+              <h2 data-i18n="comingTitle">Kindergarten and second grade are already built into the plan</h2>
+              <p class="section-intro" data-i18n="comingIntro">
+                These placeholders help families and educators see the full vision now, even before
+                every lesson is published.
+              </p>
+            </div>
+          </div>
+
+          <div class="coming-grid">
+            <article class="coming-card">
+              <span class="badge" data-i18n="roadmapKTitle">Kindergarten</span>
+              <h3 data-i18n="comingKTitle">Kindergarten lesson path</h3>
+              <p data-i18n="comingKText">
+                This section will house foundational phonological awareness, early sound play,
+                alphabet knowledge, and first blending lessons.
+              </p>
+              <ul class="coming-list">
+                <li data-i18n="comingKPointOne">Phonological awareness routines</li>
+                <li data-i18n="comingKPointTwo">Letter-sound introduction</li>
+                <li data-i18n="comingKPointThree">Early blending and segmenting</li>
+              </ul>
+            </article>
+            <article class="coming-card">
+              <span class="badge" data-i18n="roadmap2Title">Second Grade</span>
+              <h3 data-i18n="coming2Title">Second grade lesson path</h3>
+              <p data-i18n="coming2Text">
+                This section will grow into advanced decoding, larger word analysis, connected text,
+                and more fluent structured reading practice.
+              </p>
+              <ul class="coming-list">
+                <li data-i18n="coming2PointOne">Multisyllabic decoding</li>
+                <li data-i18n="coming2PointTwo">Advanced vowel patterns</li>
+                <li data-i18n="coming2PointThree">Fluency and text application</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="translation" class="section section-highlight">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="translationEyebrow">Translation support</p>
+              <h2 data-i18n="translationTitle">A realistic multilingual launch plan</h2>
+            </div>
+          </div>
+
+          <div class="translation-layout">
+            <article class="panel-card">
+              <h3 data-i18n="phaseOneTitle">Phase 1: fast launch</h3>
+              <p data-i18n="phaseOneText">
+                Publish lessons in English first with captions and simple parent notes.
+              </p>
+            </article>
+            <article class="panel-card">
+              <h3 data-i18n="phaseTwoTitle">Phase 2: translated support</h3>
+              <p data-i18n="phaseTwoText">
+                Add Spanish summaries, navigation labels, and caregiver directions where they help
+                most.
+              </p>
+            </article>
+            <article class="panel-card">
+              <h3 data-i18n="phaseThreeTitle">Phase 3: expanded access</h3>
+              <p data-i18n="phaseThreeText">
+                Introduce translated transcripts and additional language options as the library
+                grows.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="sequenceEyebrow">Scope and sequence</p>
+              <h2 data-i18n="sequenceTitle">Your instruction can be original, structured, and scalable</h2>
+            </div>
+          </div>
+
+          <div class="translation-layout">
+            <article class="panel-card">
+              <h3 data-i18n="sequenceOneTitle">Start with phonological skills</h3>
+              <p data-i18n="sequenceOneText">
+                Build early lessons around listening, segmenting, blending, and manipulating sounds.
+              </p>
+            </article>
+            <article class="panel-card">
+              <h3 data-i18n="sequenceTwoTitle">Move into sound-spelling patterns</h3>
+              <p data-i18n="sequenceTwoText">
+                Introduce consonants, short vowels, digraphs, and high-utility word patterns in a
+                clear progression.
+              </p>
+            </article>
+            <article class="panel-card">
+              <h3 data-i18n="sequenceThreeTitle">Grow toward fluent reading</h3>
+              <p data-i18n="sequenceThreeText">
+                Expand into connected text, multisyllabic words, and review pathways for repeated
+                practice.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="families" class="section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="familiesEyebrow">For families and educators</p>
+              <h2 data-i18n="familiesTitle">Every lesson should feel welcoming, not overwhelming</h2>
+            </div>
+          </div>
+
+          <div class="family-grid">
+            <article class="family-card">
+              <h3 data-i18n="familyOneTitle">Step-by-step guidance</h3>
+              <p data-i18n="familyOneText">
+                Short descriptions explain what the learner will practice and how an adult can help.
+              </p>
+            </article>
+            <article class="family-card">
+              <h3 data-i18n="familyTwoTitle">Consistent lesson rhythm</h3>
+              <p data-i18n="familyTwoText">
+                Familiar pacing makes it easier for children to focus and return with confidence.
+              </p>
+            </article>
+            <article class="family-card">
+              <h3 data-i18n="familyThreeTitle">Accessible design choices</h3>
+              <p data-i18n="familyThreeText">
+                Strong contrast, readable type, and generous spacing support a wide range of users.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="faq" class="section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="faqEyebrow">FAQ</p>
+              <h2 data-i18n="faqTitle">Questions families and educators are likely to ask first</h2>
+            </div>
+          </div>
+
+          <div class="faq-grid">
+            <article class="panel-card">
+              <h3 data-i18n="faqOneTitle">How should families use the lessons?</h3>
+              <p data-i18n="faqOneText">
+                Start with the recommended lesson order, watch short sessions consistently, and
+                repeat lessons whenever a student benefits from review.
+              </p>
+            </article>
+            <article class="panel-card">
+              <h3 data-i18n="faqTwoTitle">Will more grades be added?</h3>
+              <p data-i18n="faqTwoText">
+                Yes. The first-grade library is launching first, with Kindergarten and second grade
+                planned next.
+              </p>
+            </article>
+            <article class="panel-card">
+              <h3 data-i18n="faqThreeTitle">Will translated support be available?</h3>
+              <p data-i18n="faqThreeText">
+                Yes. The site is designed to grow into translated navigation, lesson summaries, and
+                caregiver guidance.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="about" class="section about-section">
+          <div>
+            <p class="eyebrow" data-i18n="aboutEyebrow">About the project</p>
+            <h2 data-i18n="aboutTitle">A warm, trustworthy home for reading instruction</h2>
+          </div>
+          <p data-i18n="aboutText">
+            Mr. DeHart's Read Together Project is designed to give families and educators
+            straightforward access to recorded reading lessons built from an original structured
+            literacy scope and sequence, especially for students who benefit from repeated viewing,
+            clear routines, and multilingual support.
+          </p>
+        </section>
+      </main>
+
+      <footer id="contact" class="footer">
+        <div>
+          <strong>Mr. DeHart's Read Together Project</strong>
+          <p data-i18n="footerText">
+            Built to support literacy learning with calm design, strong instruction, and room to
+            grow.
+          </p>
+        </div>
+        <a class="button button-secondary" href="#home" data-i18n="footerAction">Back to top</a>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
