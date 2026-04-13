@@ -180,6 +180,12 @@ body[data-page="about-page"] .page-intro-layout {
   align-items: center;
 }
 
+body[data-page="lesson-template"] .page-intro-layout {
+  grid-template-columns: minmax(0, 1.12fr) minmax(250px, 320px);
+  gap: 0.9rem 1rem;
+  align-items: center;
+}
+
 .page-intro-card h1 {
   max-width: 9ch;
   color: var(--navy-950);
@@ -204,6 +210,13 @@ body[data-page="about-page"] .page-intro-card h1 {
   max-width: 13ch;
   color: var(--white);
   font-size: clamp(1.5rem, 2.55vw, 2.15rem);
+  line-height: 1.05;
+}
+
+body[data-page="lesson-template"] .page-intro-card h1 {
+  max-width: 13ch;
+  color: var(--white);
+  font-size: clamp(1.45rem, 2.35vw, 2.05rem);
   line-height: 1.05;
 }
 
@@ -280,6 +293,11 @@ body[data-page="about-page"] .page-intro .eyebrow {
   margin-bottom: 0.45rem;
 }
 
+body[data-page="lesson-template"] .page-intro .eyebrow {
+  color: var(--gold-300);
+  margin-bottom: 0.45rem;
+}
+
 body[data-page="lessons-hub"] .page-intro .section-intro {
   max-width: 34ch;
   margin-top: 0.45rem;
@@ -301,6 +319,13 @@ body[data-page="about-page"] .page-intro .section-intro {
   line-height: 1.55;
 }
 
+body[data-page="lesson-template"] .page-intro .section-intro {
+  max-width: 41ch;
+  margin-top: 0.45rem;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.55;
+}
+
 body[data-page="lessons-hub"] .page-intro .button-secondary {
   background: rgba(217, 231, 245, 0.86);
 }
@@ -310,6 +335,10 @@ body[data-unit-page] .page-intro .button-secondary {
 }
 
 body[data-page="about-page"] .page-intro .button-secondary {
+  background: rgba(217, 231, 245, 0.86);
+}
+
+body[data-page="lesson-template"] .page-intro .button-secondary {
   background: rgba(217, 231, 245, 0.86);
 }
 
@@ -330,7 +359,18 @@ body[data-page="about-page"] .page-intro .panel-card {
   box-shadow: none;
 }
 
+body[data-page="lesson-template"] .page-intro .panel-card {
+  padding: 1rem 1.05rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+}
+
 body[data-page="about-page"] .page-intro .panel-label {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+body[data-page="lesson-template"] .page-intro .panel-label {
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -339,6 +379,15 @@ body[data-page="about-page"] .page-intro .feature-list {
 }
 
 body[data-page="about-page"] .page-intro .feature-list li {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+}
+
+body[data-page="lesson-template"] .page-intro .feature-list {
+  margin-top: 0.6rem;
+}
+
+body[data-page="lesson-template"] .page-intro .feature-list li {
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.55;
 }
@@ -838,6 +887,157 @@ select {
   color: var(--ink-700);
 }
 
+.lesson-page-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.lesson-page-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  gap: 1rem;
+}
+
+.lesson-video-card {
+  padding: 1.15rem;
+  background:
+    linear-gradient(145deg, rgba(16, 42, 67, 0.98), rgba(31, 60, 91, 0.94)),
+    var(--navy-900);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.lesson-video-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 360px;
+  padding: 1.1rem;
+  background:
+    linear-gradient(180deg, rgba(4, 15, 27, 0.1), rgba(4, 15, 27, 0.3)),
+    linear-gradient(145deg, rgba(49, 87, 124, 0.94), rgba(16, 42, 67, 0.96));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.lesson-video-frame::before {
+  content: "";
+  position: absolute;
+  inset: 1rem auto auto 1rem;
+  width: 88px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow:
+    108px 0 0 rgba(255, 255, 255, 0.16),
+    216px 0 0 rgba(255, 255, 255, 0.16);
+}
+
+.lesson-video-play {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(4px);
+}
+
+.lesson-video-play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid var(--white);
+}
+
+.lesson-video-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.lesson-video-caption p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.lesson-page-sidebar {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.lesson-page-sidebar .panel-card {
+  height: fit-content;
+}
+
+.lesson-page-sidebar h3,
+.lesson-section-card h2 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-size: 1.35rem;
+}
+
+.lesson-section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.lesson-section-card {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(16, 42, 67, 0.08);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.lesson-section-card p,
+.lesson-page-sidebar p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--ink-700);
+}
+
+.resource-list,
+.step-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--navy-800);
+}
+
+.resource-list li,
+.step-list li {
+  line-height: 1.6;
+}
+
+.lesson-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.lesson-inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .lesson-browser {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.85fr);
@@ -1044,6 +1244,11 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .lesson-page-main,
+  .lesson-section-grid {
+    grid-template-columns: 1fr;
+  }
+
   .unit-page-nav {
     grid-template-columns: 1fr;
   }
@@ -1068,6 +1273,10 @@ select {
     padding: 1rem;
   }
 
+  body[data-page="lesson-template"] .page-intro-card {
+    padding: 1rem;
+  }
+
   .lesson-detail {
     position: static;
   }
@@ -1087,6 +1296,10 @@ select {
 
   .about-story-card {
     grid-template-columns: 1fr;
+  }
+
+  .lesson-video-frame {
+    min-height: 280px;
   }
 }
 
@@ -1151,4 +1364,13 @@ select {
   .hero-video-frame {
     min-height: 300px;
   }
+}
+body[data-page="lesson-template"] .page-intro-card {
+  padding: 1rem 1.15rem;
+  background:
+    linear-gradient(145deg, rgba(16, 42, 67, 0.98), rgba(31, 60, 91, 0.94)),
+    var(--navy-900);
+  color: var(--white);
+  border-radius: 30px;
+  border-color: rgba(255, 255, 255, 0.08);
 }
