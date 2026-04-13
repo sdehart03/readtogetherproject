@@ -667,8 +667,6 @@ function renderUnitPage() {
         <p class="eyebrow">${copy.unitPageLabel}</p>
         <h1>${unit.label}: ${unit.title}</h1>
         <p class="section-intro">${unit.range} · ${unit.lessons.length} lessons · ${unit.audience}</p>
-        <p class="section-intro">${unit.description}</p>
-        <p class="section-intro">${copy.unitPageIntro}</p>
       </div>
       <div class="page-intro-meta">
         <label class="page-language-picker">
