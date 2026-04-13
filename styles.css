@@ -210,6 +210,9 @@ body[data-unit-page] .page-intro-actions {
 }
 
 body[data-page="lessons-hub"] .page-intro-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 0.6rem;
   margin-top: 0;
   align-self: center;
