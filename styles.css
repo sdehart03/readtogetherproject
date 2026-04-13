@@ -62,12 +62,6 @@ a {
   border: 1px solid rgba(16, 42, 67, 0.08);
   border-radius: 16px;
   box-shadow: var(--shadow);
-  transition: transform 220ms ease, opacity 220ms ease, box-shadow 220ms ease;
-}
-
-.topbar.is-hidden {
-  opacity: 0;
-  transform: translateY(calc(-100% - 0.75rem));
 }
 
 .brand {

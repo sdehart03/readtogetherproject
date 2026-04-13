@@ -525,7 +525,6 @@ const initialLessonId = Number(urlParams.get("lesson"));
 let selectedLessonId =
   lessons.find((lesson) => lesson.lessonNumber === initialLessonId)?.lessonNumber ||
   lessons[0].lessonNumber;
-let lastScrollY = window.scrollY;
 
 function renderUnits() {
   if (!unitGrid) {
@@ -843,22 +842,6 @@ if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-}
-
-if (topbar && siteNav) {
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-    const scrollingDown = currentScrollY > lastScrollY;
-    const passedThreshold = currentScrollY > 80;
-
-    if (passedThreshold && scrollingDown && !siteNav.classList.contains("open")) {
-      topbar.classList.add("is-hidden");
-    } else {
-      topbar.classList.remove("is-hidden");
-    }
-
-    lastScrollY = currentScrollY;
   });
 }
 
