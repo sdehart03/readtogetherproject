@@ -60,27 +60,37 @@
       <main id="lessons-home">
         <section class="page-intro section">
           <div class="page-intro-card">
-            <p class="eyebrow" data-i18n="libraryEyebrow">Lesson library</p>
-            <h1 data-i18n="libraryPageTitle">K-1 lessons, all in one place</h1>
-            <p class="section-intro" data-i18n="libraryPageIntro">
-              Browse the full lesson pathway by unit, preview individual lessons, and keep Grade 2
-              planning separate until it is ready to launch.
-            </p>
-            <div class="page-intro-meta">
+            <div class="page-intro-layout">
               <div>
-                <p class="panel-label" data-i18n="languageAccess">Language access</p>
-                <p class="section-intro" data-i18n="translationText">
-                  Start in English, then expand with translated navigation, lesson summaries, and
-                  parent guidance.
+                <p class="eyebrow" data-i18n="libraryEyebrow">Lesson library</p>
+                <h1 data-i18n="libraryPageTitle">K-1 lessons, all in one place</h1>
+                <p class="section-intro" data-i18n="libraryPageIntro">
+                  Browse the full lesson pathway by unit, preview individual lessons, and keep Grade 2
+                  planning separate until it is ready to launch.
                 </p>
               </div>
-              <label class="page-language-picker">
-                <span data-i18n="languageAccess">Language access</span>
-                <select id="language-switcher" aria-label="Language switcher">
-                  <option value="en">English</option>
-                  <option value="es">Español</option>
-                </select>
-              </label>
+              <div class="page-intro-meta">
+                <label class="page-language-picker">
+                  <span data-i18n="languageAccess">Language access</span>
+                  <select id="language-switcher" aria-label="Language switcher">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                  </select>
+                </label>
+                <label class="page-language-picker">
+                  <span data-i18n="unitJumpLabel">Jump to unit</span>
+                  <select id="unit-jump" aria-label="Jump to unit">
+                    <option value="" data-i18n="unitJumpPlaceholder">Choose a unit</option>
+                    <option value="unit-1.html" data-i18n="filterUnitOne">Unit 1: Phonemic Awareness and CVC Review</option>
+                    <option value="unit-2.html" data-i18n="filterUnitTwo">Unit 2: Digraphs</option>
+                    <option value="unit-3.html" data-i18n="filterUnitThree">Unit 3: Consonant Blends</option>
+                    <option value="unit-4.html" data-i18n="filterUnitFour">Unit 4: Two-Syllable Closed Words</option>
+                    <option value="unit-5.html" data-i18n="filterUnitFive">Unit 5: Silent E / VCe</option>
+                    <option value="unit-6.html" data-i18n="filterUnitSix">Unit 6: Vowel Teams</option>
+                    <option value="unit-7.html" data-i18n="filterUnitSeven">Unit 7: R-Controlled Vowels</option>
+                  </select>
+                </label>
+              </div>
             </div>
             <div class="page-intro-actions">
               <a class="button button-primary" href="#lessons" data-i18n="browseLessons">Browse Lessons</a>

@@ -243,6 +243,8 @@ const translations = {
     libraryPageTitle: "K-1 lessons, all in one place",
     libraryPageIntro:
       "Browse the full lesson pathway by unit, preview individual lessons, and keep Grade 2 planning separate until it is ready to launch.",
+    unitJumpLabel: "Jump to unit",
+    unitJumpPlaceholder: "Choose a unit",
     unitHubLabel: "How to use the library",
     unitHubTitle: "Pick the unit your learner needs right now",
     unitHubText:
@@ -397,6 +399,8 @@ const translations = {
     libraryPageTitle: "Lecciones de K-1 en un solo lugar",
     libraryPageIntro:
       "Recorra toda la ruta de lecciones por unidad, revise lecciones individuales y mantenga aparte la planificacion de grado 2 hasta que este lista para publicarse.",
+    unitJumpLabel: "Ir a una unidad",
+    unitJumpPlaceholder: "Elija una unidad",
     unitHubLabel: "Como usar la biblioteca",
     unitHubTitle: "Elija la unidad que su estudiante necesita ahora",
     unitHubText:
@@ -499,6 +503,7 @@ const unitGrid = document.querySelector("#unit-grid");
 const lessonDetail = document.querySelector("#lesson-detail");
 const lessonFilter = document.querySelector("#lesson-filter");
 const languageSwitcher = document.querySelector("#language-switcher");
+const unitJump = document.querySelector("#unit-jump");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const topbar = document.querySelector(".topbar");
@@ -749,6 +754,15 @@ if (languageSwitcher) {
     renderUnits();
     renderLessons(lessonFilter?.value || "all");
     renderUnitPage();
+  });
+}
+
+if (unitJump) {
+  unitJump.addEventListener("change", (event) => {
+    const destination = event.target.value;
+    if (destination) {
+      window.location.href = destination;
+    }
   });
 }
 
