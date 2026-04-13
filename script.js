@@ -302,10 +302,14 @@ const translations = {
     aboutEyebrow: "About the project",
     aboutPageTitle: "Why The Read Together Project exists",
     aboutPageIntro:
-      "The Read Together Project is designed to give families and educators a clear, welcoming place to access structured literacy lessons, revisit key skills, and support children with consistent routines across home and school.",
-    aboutTitle: "A warm, trustworthy home for reading instruction",
+      "The Read Together Project brings families and educators to one clear place for structured literacy lessons, repeatable routines, and support that works across home and school.",
+    aboutQuickLabel: "At a glance",
+    aboutQuickOne: "Structured literacy lessons in a clear sequence",
+    aboutQuickTwo: "Family-friendly routines and repeatable access",
+    aboutQuickThree: "Designed to grow with more supports over time",
+    aboutTitle: "A clear, reliable home for structured literacy support",
     aboutText:
-      "The Read Together Project provides families and educators with straightforward access to recorded reading lessons built from an original structured literacy scope and sequence, especially for students who benefit from repeated viewing, clear routines, and multilingual support.",
+      "The Read Together Project gives families and educators straightforward access to recorded reading lessons built from an original structured literacy scope and sequence, especially for learners who benefit from repeated viewing, clear routines, and support that can expand across languages over time.",
     aboutCardOneTitle: "Built for repeated access",
     aboutCardOneText:
       "Families and educators can return to lessons as often as needed, making it easier to review, practice, and build confidence over time.",
@@ -461,10 +465,14 @@ const translations = {
     aboutEyebrow: "Sobre el proyecto",
     aboutPageTitle: "Por que existe The Read Together Project",
     aboutPageIntro:
-      "The Read Together Project esta disenado para dar a familias y educadores un lugar claro y acogedor donde acceder a lecciones de alfabetizacion estructurada, repasar habilidades clave y apoyar a los ninos con rutinas constantes entre el hogar y la escuela.",
-    aboutTitle: "Un hogar calido y confiable para la instruccion de lectura",
+      "The Read Together Project ofrece a familias y educadores un lugar claro para acceder a lecciones de alfabetizacion estructurada, volver a ver habilidades clave y apoyar a los ninos con rutinas constantes entre el hogar y la escuela.",
+    aboutQuickLabel: "Resumen rapido",
+    aboutQuickOne: "Lecciones de alfabetizacion estructurada en una secuencia clara",
+    aboutQuickTwo: "Rutinas amigables para familias y acceso repetible",
+    aboutQuickThree: "Disenado para crecer con mas apoyos con el tiempo",
+    aboutTitle: "Un espacio claro y confiable para apoyar la alfabetizacion estructurada",
     aboutText:
-      "The Read Together Project brinda a familias y educadores acceso directo a lecciones grabadas de lectura creadas a partir de un alcance y secuencia original de alfabetizacion estructurada, especialmente para estudiantes que se benefician de verlas varias veces, rutinas claras y apoyo multilingue.",
+      "The Read Together Project brinda a familias y educadores acceso directo a lecciones grabadas de lectura creadas a partir de un alcance y secuencia original de alfabetizacion estructurada, especialmente para estudiantes que se benefician de verlas varias veces, de rutinas claras y de apoyos que pueden ampliarse a mas idiomas con el tiempo.",
     aboutCardOneTitle: "Pensado para volver a usarlo",
     aboutCardOneText:
       "Las familias y los educadores pueden volver a las lecciones tantas veces como sea necesario, lo que facilita repasar, practicar y ganar confianza con el tiempo.",

@@ -145,6 +145,16 @@ body[data-unit-page] .page-intro-card {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
+body[data-page="about-page"] .page-intro-card {
+  padding: 1rem 1.15rem;
+  background:
+    linear-gradient(145deg, rgba(16, 42, 67, 0.98), rgba(31, 60, 91, 0.94)),
+    var(--navy-900);
+  color: var(--white);
+  border-radius: 30px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
 .page-intro-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(260px, 340px);
@@ -161,6 +171,12 @@ body[data-page="lessons-hub"] .page-intro-layout {
 body[data-unit-page] .page-intro-layout {
   grid-template-columns: minmax(0, 1.18fr) minmax(240px, 300px);
   gap: 0.65rem 0.9rem;
+  align-items: center;
+}
+
+body[data-page="about-page"] .page-intro-layout {
+  grid-template-columns: minmax(0, 1.15fr) minmax(250px, 320px);
+  gap: 0.9rem 1rem;
   align-items: center;
 }
 
@@ -181,6 +197,13 @@ body[data-unit-page] .page-intro-card h1 {
   max-width: 14ch;
   color: var(--white);
   font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.05;
+}
+
+body[data-page="about-page"] .page-intro-card h1 {
+  max-width: 13ch;
+  color: var(--white);
+  font-size: clamp(1.5rem, 2.55vw, 2.15rem);
   line-height: 1.05;
 }
 
@@ -252,6 +275,11 @@ body[data-unit-page] .page-intro .eyebrow {
   margin-bottom: 0.35rem;
 }
 
+body[data-page="about-page"] .page-intro .eyebrow {
+  color: var(--gold-300);
+  margin-bottom: 0.45rem;
+}
+
 body[data-page="lessons-hub"] .page-intro .section-intro {
   max-width: 34ch;
   margin-top: 0.45rem;
@@ -266,11 +294,22 @@ body[data-unit-page] .page-intro .section-intro {
   line-height: 1.35;
 }
 
+body[data-page="about-page"] .page-intro .section-intro {
+  max-width: 41ch;
+  margin-top: 0.45rem;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.55;
+}
+
 body[data-page="lessons-hub"] .page-intro .button-secondary {
   background: rgba(217, 231, 245, 0.86);
 }
 
 body[data-unit-page] .page-intro .button-secondary {
+  background: rgba(217, 231, 245, 0.86);
+}
+
+body[data-page="about-page"] .page-intro .button-secondary {
   background: rgba(217, 231, 245, 0.86);
 }
 
@@ -282,6 +321,26 @@ body[data-page="lessons-hub"] .page-intro select {
 body[data-unit-page] .page-intro select {
   max-width: none;
   background: rgba(255, 255, 255, 0.96);
+}
+
+body[data-page="about-page"] .page-intro .panel-card {
+  padding: 1rem 1.05rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+}
+
+body[data-page="about-page"] .page-intro .panel-label {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+body[data-page="about-page"] .page-intro .feature-list {
+  margin-top: 0.6rem;
+}
+
+body[data-page="about-page"] .page-intro .feature-list li {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
 }
 
 .hero-copy,
@@ -741,6 +800,44 @@ select {
   background: rgba(255, 255, 255, 0.88);
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-grid .panel-card {
+  height: 100%;
+}
+
+.about-story {
+  padding-top: 1.4rem;
+}
+
+.about-story-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1rem 1.25rem;
+  align-items: start;
+  padding: 1.3rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(16, 42, 67, 0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.about-story-card h2 {
+  max-width: 12ch;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  color: var(--navy-950);
+}
+
+.about-story-card p {
+  margin: 0;
+  line-height: 1.75;
+  color: var(--ink-700);
+}
+
 .lesson-browser {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.85fr);
@@ -930,6 +1027,7 @@ select {
   .roadmap-grid,
   .lesson-grid,
   .section-highlight .translation-layout,
+  .about-grid,
   .family-grid,
   .faq-grid,
   .coming-grid,
@@ -966,6 +1064,10 @@ select {
     padding: 1rem;
   }
 
+  body[data-page="about-page"] .page-intro-card {
+    padding: 1rem;
+  }
+
   .lesson-detail {
     position: static;
   }
@@ -980,6 +1082,10 @@ select {
   }
 
   .hero-note {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story-card {
     grid-template-columns: 1fr;
   }
 }

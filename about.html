@@ -32,7 +32,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="about-page">
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="index.html#home" aria-label="The Read Together Project home">
@@ -55,13 +55,25 @@
       <main id="about">
         <section class="page-intro section">
           <div class="page-intro-card">
-            <p class="eyebrow" data-i18n="aboutEyebrow">About the project</p>
-            <h1 data-i18n="aboutPageTitle">Why The Read Together Project exists</h1>
-            <p class="section-intro" data-i18n="aboutPageIntro">
-              The Read Together Project is designed to give families and educators a clear, welcoming
-              place to access structured literacy lessons, revisit key skills, and support children
-              with consistent routines across home and school.
-            </p>
+            <div class="page-intro-layout">
+              <div>
+                <p class="eyebrow" data-i18n="aboutEyebrow">About the project</p>
+                <h1 data-i18n="aboutPageTitle">Why The Read Together Project exists</h1>
+                <p class="section-intro" data-i18n="aboutPageIntro">
+                  The Read Together Project is designed to give families and educators a clear, welcoming
+                  place to access structured literacy lessons, revisit key skills, and support children
+                  with consistent routines across home and school.
+                </p>
+              </div>
+              <div class="about-quicklook panel-card">
+                <p class="panel-label" data-i18n="aboutQuickLabel">At a glance</p>
+                <ul class="feature-list">
+                  <li data-i18n="aboutQuickOne">Structured literacy lessons in a clear sequence</li>
+                  <li data-i18n="aboutQuickTwo">Family-friendly routines and repeatable access</li>
+                  <li data-i18n="aboutQuickThree">Designed to grow with more supports over time</li>
+                </ul>
+              </div>
+            </div>
             <div class="page-intro-actions">
               <a class="button button-primary" href="lessons.html" data-i18n="browseLessons">Browse Lessons</a>
               <a class="button button-secondary" href="index.html" data-i18n="backHome">Back to Home</a>
@@ -70,7 +82,7 @@
         </section>
 
         <section class="section">
-          <div class="translation-layout">
+          <div class="about-grid">
             <article class="panel-card">
               <h3 data-i18n="aboutCardOneTitle">Built for repeated access</h3>
               <p data-i18n="aboutCardOneText">
@@ -95,17 +107,19 @@
           </div>
         </section>
 
-        <section class="section about-section">
-          <div>
-            <p class="eyebrow" data-i18n="aboutEyebrow">About the project</p>
-            <h2 data-i18n="aboutTitle">A warm, trustworthy home for reading instruction</h2>
-          </div>
-          <p data-i18n="aboutText">
-            The Read Together Project provides families and educators with straightforward access to
-            recorded reading lessons built from an original structured literacy scope and sequence,
-            especially for students who benefit from repeated viewing, clear routines, and
-            multilingual support.
-          </p>
+        <section class="section about-story">
+          <article class="about-story-card">
+            <div>
+              <p class="eyebrow" data-i18n="aboutEyebrow">About the project</p>
+              <h2 data-i18n="aboutTitle">A warm, trustworthy home for reading instruction</h2>
+            </div>
+            <p data-i18n="aboutText">
+              The Read Together Project provides families and educators with straightforward access to
+              recorded reading lessons built from an original structured literacy scope and sequence,
+              especially for students who benefit from repeated viewing, clear routines, and
+              multilingual support.
+            </p>
+          </article>
         </section>
       </main>
 
