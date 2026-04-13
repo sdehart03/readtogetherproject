@@ -1,6 +1,7 @@
 const units = [
   {
     id: "phonemic-cvc",
+    slug: "unit-1.html",
     label: "Unit 1",
     title: "Phonemic Awareness and CVC Review",
     range: "Lessons 1-10",
@@ -22,6 +23,7 @@ const units = [
   },
   {
     id: "digraphs",
+    slug: "unit-2.html",
     label: "Unit 2",
     title: "Digraphs",
     range: "Lessons 11-24",
@@ -47,6 +49,7 @@ const units = [
   },
   {
     id: "consonant-blends",
+    slug: "unit-3.html",
     label: "Unit 3",
     title: "Consonant Blends",
     range: "Lessons 25-44",
@@ -78,6 +81,7 @@ const units = [
   },
   {
     id: "two-syllable-closed",
+    slug: "unit-4.html",
     label: "Unit 4",
     title: "Two-Syllable Closed Words",
     range: "Lessons 45-54",
@@ -99,6 +103,7 @@ const units = [
   },
   {
     id: "silent-e-vce",
+    slug: "unit-5.html",
     label: "Unit 5",
     title: "Silent E / VCe",
     range: "Lessons 55-69",
@@ -125,6 +130,7 @@ const units = [
   },
   {
     id: "vowel-teams",
+    slug: "unit-6.html",
     label: "Unit 6",
     title: "Vowel Teams",
     range: "Lessons 70-84",
@@ -151,6 +157,7 @@ const units = [
   },
   {
     id: "r-controlled",
+    slug: "unit-7.html",
     label: "Unit 7",
     title: "R-Controlled Vowels",
     range: "Lessons 85-90",
@@ -228,11 +235,26 @@ const translations = {
       "Expanded multisyllabic decoding, advanced patterns, and more fluent reading work.",
     libraryEyebrow: "Lesson library",
     libraryTitle: "K-1 scope and sequence, organized for real use",
+    libraryHubTitle: "Choose a unit and go straight to the right lessons",
+    libraryHubIntro:
+      "The combined K-1 pathway is organized into seven units. Open the unit your learner is currently working on instead of scrolling through the entire lesson bank.",
     libraryIntro:
       "The combined K-1 pathway is fully mapped with 90 lessons across seven units. Grade 2 is in development.",
     libraryPageTitle: "K-1 lessons, all in one place",
     libraryPageIntro:
       "Browse the full lesson pathway by unit, preview individual lessons, and keep Grade 2 planning separate until it is ready to launch.",
+    unitHubLabel: "How to use the library",
+    unitHubTitle: "Pick the unit your learner needs right now",
+    unitHubText:
+      "Each unit opens on its own page with only the connected lessons, which makes the library easier for families to use on phones, tablets, and computers.",
+    openUnit: "Open unit",
+    backToLibrary: "Back to Library",
+    unitPageLabel: "Current unit",
+    unitPageLessonsTitle: "Lessons in this unit",
+    unitPageIntro:
+      "Open the lessons below to stay focused on this unit without scrolling through the full library.",
+    previousUnit: "Previous Unit",
+    nextUnit: "Next Unit",
     filterLabel: "Unit",
     filterAll: "All lessons",
     filterUnitOne: "Unit 1: Phonemic Awareness and CVC Review",
@@ -367,11 +389,26 @@ const translations = {
       "Decodificacion multisilabica ampliada, patrones avanzados y mayor trabajo de fluidez.",
     libraryEyebrow: "Biblioteca de lecciones",
     libraryTitle: "Secuencia de K-1 organizada para uso real",
+    libraryHubTitle: "Elija una unidad y vaya directo a las lecciones correctas",
+    libraryHubIntro:
+      "La ruta combinada de K-1 esta organizada en siete unidades. Abra la unidad en la que trabaja el estudiante en lugar de recorrer toda la biblioteca.",
     libraryIntro:
       "La ruta combinada de K-1 ya tiene 90 lecciones distribuidas en siete unidades. El grado 2 esta en desarrollo.",
     libraryPageTitle: "Lecciones de K-1 en un solo lugar",
     libraryPageIntro:
       "Recorra toda la ruta de lecciones por unidad, revise lecciones individuales y mantenga aparte la planificacion de grado 2 hasta que este lista para publicarse.",
+    unitHubLabel: "Como usar la biblioteca",
+    unitHubTitle: "Elija la unidad que su estudiante necesita ahora",
+    unitHubText:
+      "Cada unidad se abre en su propia pagina con solo las lecciones correspondientes, lo que hace que la biblioteca sea mas facil de usar para las familias en telefonos, tabletas y computadoras.",
+    openUnit: "Abrir unidad",
+    backToLibrary: "Volver a la biblioteca",
+    unitPageLabel: "Unidad actual",
+    unitPageLessonsTitle: "Lecciones de esta unidad",
+    unitPageIntro:
+      "Abra las lecciones de abajo para mantenerse enfocado en esta unidad sin tener que recorrer toda la biblioteca.",
+    previousUnit: "Unidad anterior",
+    nextUnit: "Unidad siguiente",
     filterLabel: "Unidad",
     filterAll: "Todas las lecciones",
     filterUnitOne: "Unidad 1: Conciencia fonemica y repaso CVC",
@@ -468,6 +505,10 @@ const topbar = document.querySelector(".topbar");
 const spotlightTitle = document.querySelector("#spotlight-title");
 const spotlightText = document.querySelector("#spotlight-text");
 const spotlightUnit = document.querySelector("#spotlight-unit");
+const unitPageHeader = document.querySelector("#unit-page-header");
+const unitPageLessons = document.querySelector("#unit-page-lessons");
+const unitPageNav = document.querySelector("#unit-page-nav");
+const currentUnitPage = document.body.dataset.unitPage;
 const currentLanguage = () => languageSwitcher?.value || document.documentElement.lang || "en";
 let selectedLessonId = lessons[0].lessonNumber;
 let lastScrollY = window.scrollY;
@@ -477,15 +518,19 @@ function renderUnits() {
     return;
   }
 
+  const copy = translations[currentLanguage()] || translations.en;
   unitGrid.innerHTML = units
     .map(
       (unit) => `
-        <article class="unit-card">
-          <span class="badge">${unit.label}</span>
-          <h3>${unit.title}</h3>
-          <p>${unit.range} · ${unit.lessons.length} lessons</p>
-          <p>${unit.description}</p>
-        </article>
+        <a class="unit-link" href="${unit.slug}">
+          <article class="unit-card">
+            <span class="badge">${unit.label}</span>
+            <h3>${unit.title}</h3>
+            <p>${unit.range} · ${unit.lessons.length} lessons</p>
+            <p>${unit.description}</p>
+            <span class="unit-link-text">${copy.openUnit}</span>
+          </article>
+        </a>
       `,
     )
     .join("");
@@ -587,6 +632,74 @@ function renderLessons(filter = "all") {
     .join("");
 }
 
+function renderUnitPage() {
+  if (!currentUnitPage || !unitPageHeader || !unitPageLessons) {
+    return;
+  }
+
+  const copy = translations[currentLanguage()] || translations.en;
+  const unitIndex = units.findIndex((unit) => unit.id === currentUnitPage);
+  const unit = units[unitIndex];
+
+  if (!unit) {
+    return;
+  }
+
+  const unitLessons = lessons.filter((lesson) => lesson.category === unit.id);
+  const activeLesson =
+    unitLessons.find((lesson) => lesson.lessonNumber === selectedLessonId) || unitLessons[0];
+
+  selectedLessonId = activeLesson.lessonNumber;
+  renderLessonDetail(activeLesson);
+
+  unitPageHeader.innerHTML = `
+    <p class="eyebrow">${copy.unitPageLabel}</p>
+    <h1>${unit.label}: ${unit.title}</h1>
+    <p class="section-intro">${unit.range} · ${unit.lessons.length} lessons · ${unit.audience}</p>
+    <p class="section-intro">${unit.description}</p>
+    <p class="section-intro">${copy.unitPageIntro}</p>
+    <div class="page-intro-actions">
+      <a class="button button-primary" href="#unit-page-lessons">${copy.unitPageLessonsTitle}</a>
+      <a class="button button-secondary" href="lessons.html">${copy.backToLibrary}</a>
+    </div>
+  `;
+
+  unitPageLessons.innerHTML = unitLessons
+    .map(
+      (lesson) => `
+        <button class="lesson-button" type="button" data-lesson-id="${lesson.lessonNumber}">
+          <article class="lesson-card">
+            <div class="lesson-card-top">
+              <div>
+                <h3>Lesson ${lesson.lessonNumber}: ${lesson.title}</h3>
+              </div>
+              <span class="badge">${lesson.duration}</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="meta-chip">${unit.label}</span>
+              <span class="meta-chip">${unit.title}</span>
+              <span class="meta-chip">${lesson.audience}</span>
+            </div>
+            <p>${lesson.description}</p>
+            <span>${copy.lessonAction}</span>
+          </article>
+        </button>
+      `,
+    )
+    .join("");
+
+  if (unitPageNav) {
+    const previousUnit = units[unitIndex - 1];
+    const nextUnit = units[unitIndex + 1];
+
+    unitPageNav.innerHTML = `
+      ${previousUnit ? `<a class="button button-secondary" href="${previousUnit.slug}">${copy.previousUnit}: ${previousUnit.label}</a>` : `<span></span>`}
+      <a class="button button-secondary" href="lessons.html">${copy.backToLibrary}</a>
+      ${nextUnit ? `<a class="button button-primary" href="${nextUnit.slug}">${copy.nextUnit}: ${nextUnit.label}</a>` : `<span></span>`}
+    `;
+  }
+}
+
 function applyTranslations(language) {
   const copy = translations[language] || translations.en;
 
@@ -618,11 +731,24 @@ if (lessonGrid) {
   });
 }
 
+if (unitPageLessons) {
+  unitPageLessons.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-lesson-id]");
+    if (!button) {
+      return;
+    }
+
+    selectedLessonId = Number(button.dataset.lessonId);
+    renderUnitPage();
+  });
+}
+
 if (languageSwitcher) {
   languageSwitcher.addEventListener("change", (event) => {
     applyTranslations(event.target.value);
     renderUnits();
     renderLessons(lessonFilter?.value || "all");
+    renderUnitPage();
   });
 }
 
@@ -652,3 +778,4 @@ if (topbar && siteNav) {
 applyTranslations(currentLanguage());
 renderUnits();
 renderLessons(lessonFilter?.value || "all");
+renderUnitPage();

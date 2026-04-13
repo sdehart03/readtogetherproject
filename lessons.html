@@ -35,7 +35,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="lessons-hub">
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="index.html#home" aria-label="The Read Together Project home">
@@ -93,43 +93,22 @@
           <div class="section-heading">
             <div>
               <p class="eyebrow" data-i18n="libraryEyebrow">Lesson library</p>
-              <h2 data-i18n="libraryTitle">K-1 scope and sequence, organized for real use</h2>
-              <p class="section-intro" data-i18n="libraryIntro">
-                The combined K-1 pathway is fully mapped with 90 lessons across seven units. Grade
-                2 is in development.
+              <h2 data-i18n="libraryHubTitle">Choose a unit and go straight to the right lessons</h2>
+              <p class="section-intro" data-i18n="libraryHubIntro">
+                The combined K-1 pathway is organized into seven units. Open the unit your learner
+                is currently working on instead of scrolling through the entire lesson bank.
               </p>
-            </div>
-            <div class="filter-bar">
-              <label>
-                <span data-i18n="filterLabel">Unit</span>
-                <select id="lesson-filter">
-                  <option value="all" data-i18n="filterAll">All lessons</option>
-                  <option value="phonemic-cvc" data-i18n="filterUnitOne">
-                    Unit 1: Phonemic Awareness and CVC Review
-                  </option>
-                  <option value="digraphs" data-i18n="filterUnitTwo">Unit 2: Digraphs</option>
-                  <option value="consonant-blends" data-i18n="filterUnitThree">
-                    Unit 3: Consonant Blends
-                  </option>
-                  <option value="two-syllable-closed" data-i18n="filterUnitFour">
-                    Unit 4: Two-Syllable Closed Words
-                  </option>
-                  <option value="silent-e-vce" data-i18n="filterUnitFive">
-                    Unit 5: Silent E / VCe
-                  </option>
-                  <option value="vowel-teams" data-i18n="filterUnitSix">Unit 6: Vowel Teams</option>
-                  <option value="r-controlled" data-i18n="filterUnitSeven">
-                    Unit 7: R-Controlled Vowels
-                  </option>
-                </select>
-              </label>
             </div>
           </div>
 
           <div id="unit-grid" class="unit-grid"></div>
-          <div class="lesson-browser">
-            <div id="lesson-grid" class="lesson-grid"></div>
-            <aside id="lesson-detail" class="lesson-detail panel-card" aria-live="polite"></aside>
+          <div class="unit-hub-note panel-card">
+            <p class="panel-label" data-i18n="unitHubLabel">How to use the library</p>
+            <h3 data-i18n="unitHubTitle">Pick the unit your learner needs right now</h3>
+            <p data-i18n="unitHubText">
+              Each unit opens on its own page with only the connected lessons, which makes the
+              library easier for families to use on phones, tablets, and computers.
+            </p>
           </div>
         </section>
 

@@ -527,7 +527,7 @@ select {
 }
 
 .unit-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 1rem;
 }
 
@@ -542,6 +542,9 @@ select {
 }
 
 .unit-card {
+  display: grid;
+  gap: 0.55rem;
+  height: 100%;
   padding: 1.2rem;
   background: rgba(255, 255, 255, 0.88);
   border: 1px solid rgba(16, 42, 67, 0.08);
@@ -556,9 +559,35 @@ select {
 }
 
 .unit-card p {
-  margin: 0.7rem 0 0;
+  margin: 0.2rem 0 0;
   line-height: 1.65;
   color: var(--ink-700);
+}
+
+.unit-link {
+  display: block;
+}
+
+.unit-link:hover .unit-card,
+.unit-link:focus-visible .unit-card {
+  transform: translateY(-2px);
+  border-color: rgba(16, 42, 67, 0.22);
+}
+
+.unit-link-text {
+  margin-top: auto;
+  font-weight: 800;
+  color: var(--navy-900);
+}
+
+.unit-hub-note h3 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-size: 1.35rem;
+}
+
+.unit-hub-note p:last-child {
+  margin-bottom: 0;
 }
 
 .roadmap-card {
@@ -711,6 +740,17 @@ select {
   line-height: 1.7;
 }
 
+.unit-page-nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.unit-page-nav .button {
+  width: 100%;
+}
+
 .detail-meta,
 .detail-list {
   display: grid;
@@ -767,6 +807,10 @@ select {
   }
 
   .lesson-browser {
+    grid-template-columns: 1fr;
+  }
+
+  .unit-page-nav {
     grid-template-columns: 1fr;
   }
 
