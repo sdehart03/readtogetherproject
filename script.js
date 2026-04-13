@@ -255,6 +255,8 @@ const translations = {
     unitPageLessonsTitle: "Lessons in this unit",
     unitPageIntro:
       "Open the lessons below to stay focused on this unit without scrolling through the full library.",
+    lessonJumpLabel: "Jump to lesson",
+    lessonJumpPlaceholder: "Choose a lesson",
     previousUnit: "Previous Unit",
     nextUnit: "Next Unit",
     filterLabel: "Unit",
@@ -411,6 +413,8 @@ const translations = {
     unitPageLessonsTitle: "Lecciones de esta unidad",
     unitPageIntro:
       "Abra las lecciones de abajo para mantenerse enfocado en esta unidad sin tener que recorrer toda la biblioteca.",
+    lessonJumpLabel: "Ir a la leccion",
+    lessonJumpPlaceholder: "Elija una leccion",
     previousUnit: "Unidad anterior",
     nextUnit: "Unidad siguiente",
     filterLabel: "Unidad",
@@ -615,7 +619,7 @@ function renderLessons(filter = "all") {
   lessonGrid.innerHTML = filteredLessons
     .map(
       (lesson) => `
-        <button class="lesson-button" type="button" data-lesson-id="${lesson.lessonNumber}">
+        <button class="lesson-button ${lesson.lessonNumber === selectedLessonId ? "is-active" : ""}" type="button" data-lesson-id="${lesson.lessonNumber}">
           <article class="lesson-card">
             <div class="lesson-card-top">
               <div>
@@ -658,11 +662,29 @@ function renderUnitPage() {
   renderLessonDetail(activeLesson);
 
   unitPageHeader.innerHTML = `
-    <p class="eyebrow">${copy.unitPageLabel}</p>
-    <h1>${unit.label}: ${unit.title}</h1>
-    <p class="section-intro">${unit.range} · ${unit.lessons.length} lessons · ${unit.audience}</p>
-    <p class="section-intro">${unit.description}</p>
-    <p class="section-intro">${copy.unitPageIntro}</p>
+    <div class="page-intro-layout">
+      <div>
+        <p class="eyebrow">${copy.unitPageLabel}</p>
+        <h1>${unit.label}: ${unit.title}</h1>
+        <p class="section-intro">${unit.range} · ${unit.lessons.length} lessons · ${unit.audience}</p>
+        <p class="section-intro">${unit.description}</p>
+        <p class="section-intro">${copy.unitPageIntro}</p>
+      </div>
+      <div class="page-intro-meta">
+        <label class="page-language-picker">
+          <span>${copy.lessonJumpLabel}</span>
+          <select id="lesson-jump" aria-label="${copy.lessonJumpLabel}">
+            <option value="">${copy.lessonJumpPlaceholder}</option>
+            ${unitLessons
+              .map(
+                (lesson) =>
+                  `<option value="${lesson.lessonNumber}" ${lesson.lessonNumber === selectedLessonId ? "selected" : ""}>Lesson ${lesson.lessonNumber}: ${lesson.title}</option>`,
+              )
+              .join("")}
+          </select>
+        </label>
+      </div>
+    </div>
     <div class="page-intro-actions">
       <a class="button button-primary" href="#unit-page-lessons">${copy.unitPageLessonsTitle}</a>
       <a class="button button-secondary" href="lessons.html">${copy.backToLibrary}</a>
@@ -672,7 +694,7 @@ function renderUnitPage() {
   unitPageLessons.innerHTML = unitLessons
     .map(
       (lesson) => `
-        <button class="lesson-button" type="button" data-lesson-id="${lesson.lessonNumber}">
+        <button class="lesson-button ${lesson.lessonNumber === selectedLessonId ? "is-active" : ""}" type="button" data-lesson-id="${lesson.lessonNumber}">
           <article class="lesson-card">
             <div class="lesson-card-top">
               <div>
@@ -702,6 +724,20 @@ function renderUnitPage() {
       <a class="button button-secondary" href="lessons.html">${copy.backToLibrary}</a>
       ${nextUnit ? `<a class="button button-primary" href="${nextUnit.slug}">${copy.nextUnit}: ${nextUnit.label}</a>` : `<span></span>`}
     `;
+  }
+
+  const lessonJump = document.querySelector("#lesson-jump");
+  if (lessonJump) {
+    lessonJump.addEventListener("change", (event) => {
+      const nextLessonId = Number(event.target.value);
+      if (!nextLessonId) {
+        return;
+      }
+
+      selectedLessonId = nextLessonId;
+      renderUnitPage();
+      unitPageLessons.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   }
 }
 
