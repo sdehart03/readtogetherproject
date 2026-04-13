@@ -177,13 +177,14 @@ a {
 
 .hero-top {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1.12fr) minmax(260px, 0.88fr);
+  gap: 1.15rem;
   align-items: stretch;
 }
 
 .hero-main {
   min-width: 0;
+  padding-right: 0.35rem;
 }
 
 .eyebrow {
@@ -237,8 +238,8 @@ a {
   position: relative;
   display: grid;
   align-content: end;
-  min-height: 100%;
-  padding: 1rem;
+  min-height: 360px;
+  padding: 0.9rem;
   background:
     linear-gradient(180deg, rgba(4, 15, 27, 0.08), rgba(4, 15, 27, 0.38)),
     linear-gradient(145deg, rgba(49, 87, 124, 0.94), rgba(16, 42, 67, 0.96));
@@ -264,8 +265,8 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 84px;
-  height: 84px;
+  width: 74px;
+  height: 74px;
   transform: translate(-50%, -50%);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.15);
@@ -281,9 +282,9 @@ a {
   transform: translate(-50%, -50%);
   width: 0;
   height: 0;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-left: 22px solid var(--white);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid var(--white);
 }
 
 .hero-video-caption {
@@ -291,7 +292,7 @@ a {
   display: grid;
   gap: 0.45rem;
   margin-top: auto;
-  padding: 1rem;
+  padding: 0.9rem;
   background: rgba(8, 26, 45, 0.52);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
@@ -850,6 +851,6 @@ select {
   }
 
   .hero-video-frame {
-    min-height: 320px;
+    min-height: 300px;
   }
 }
