@@ -508,6 +508,7 @@ const lessonDetail = document.querySelector("#lesson-detail");
 const lessonFilter = document.querySelector("#lesson-filter");
 const languageSwitcher = document.querySelector("#language-switcher");
 const unitJump = document.querySelector("#unit-jump");
+const lessonJumpHub = document.querySelector("#lesson-jump-hub");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const topbar = document.querySelector(".topbar");
@@ -519,7 +520,11 @@ const unitPageLessons = document.querySelector("#unit-page-lessons");
 const unitPageNav = document.querySelector("#unit-page-nav");
 const currentUnitPage = document.body.dataset.unitPage;
 const currentLanguage = () => languageSwitcher?.value || document.documentElement.lang || "en";
-let selectedLessonId = lessons[0].lessonNumber;
+const urlParams = new URLSearchParams(window.location.search);
+const initialLessonId = Number(urlParams.get("lesson"));
+let selectedLessonId =
+  lessons.find((lesson) => lesson.lessonNumber === initialLessonId)?.lessonNumber ||
+  lessons[0].lessonNumber;
 let lastScrollY = window.scrollY;
 
 function renderUnits() {
@@ -739,6 +744,23 @@ function renderUnitPage() {
   }
 }
 
+function renderHubLessonJump() {
+  if (!lessonJumpHub) {
+    return;
+  }
+
+  const copy = translations[currentLanguage()] || translations.en;
+  lessonJumpHub.innerHTML = `
+    <option value="">${copy.lessonJumpPlaceholder}</option>
+    ${lessons
+      .map(
+        (lesson) =>
+          `<option value="${lesson.lessonNumber}">Lesson ${lesson.lessonNumber}: ${lesson.title}</option>`,
+      )
+      .join("")}
+  `;
+}
+
 function applyTranslations(language) {
   const copy = translations[language] || translations.en;
 
@@ -800,6 +822,23 @@ if (unitJump) {
   });
 }
 
+if (lessonJumpHub) {
+  lessonJumpHub.addEventListener("change", (event) => {
+    const nextLessonId = Number(event.target.value);
+    if (!nextLessonId) {
+      return;
+    }
+
+    const lesson = lessons.find((entry) => entry.lessonNumber === nextLessonId);
+    const unit = units.find((entry) => entry.id === lesson?.category);
+    if (!lesson || !unit) {
+      return;
+    }
+
+    window.location.href = `${unit.slug}?lesson=${lesson.lessonNumber}`;
+  });
+}
+
 if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("open");
@@ -827,3 +866,4 @@ applyTranslations(currentLanguage());
 renderUnits();
 renderLessons(lessonFilter?.value || "all");
 renderUnitPage();
+renderHubLessonJump();
